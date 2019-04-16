@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
   filteredList: Observable<string[]>;
   searchControl = new FormControl();
 
-  constructor(private dictionaryService: DictionaryService) { }
+  constructor(public dictionaryService: DictionaryService) { }
 
   ngOnInit() {
     this.filteredList = this.searchControl.valueChanges
